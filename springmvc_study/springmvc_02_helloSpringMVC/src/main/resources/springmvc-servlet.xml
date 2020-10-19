@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+   <!--下面的两个配置可以省略-->
+    <!-- &lt;!&ndash;BeanNameUrl映射处理器&ndash;&gt;
+    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+    &lt;!&ndash;Controller适配处理器&ndash;&gt;
+    <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>-->
+
+    <!--ViewResolver视图解析器-->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <!--前缀-->
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <!--后缀-->
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <!--Handler，注意id，浏览器中就是输入 /helloController name是别名 -->
+    <bean id="helloController" class="com.springmvc.controller.controller.HelloController" name="/helloController"  />
+</beans>

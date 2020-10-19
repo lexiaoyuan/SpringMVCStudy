@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查看用户</title>
+    <script src="statics/jquery.js"></script>
+    <script>
+        $(function () {
+            $.get({
+                url: "ajax/user",
+                success: function (data) {
+                    console.log(data);
+                    let userData = "";
+                    for (let i = 0; i < data.length; i++) {
+                        userData += "<tr>\n" +
+                            "<td>"+data[i].id+"</td>\n" +
+                            "<td>"+data[i].name+"</td>\n" +
+                            "<td>"+data[i].email+"</td>\n" +
+                            "</tr>";
+                    }
+                    $("#user-info").html(userData);
+                },
+                error: function (status) {
+                    alert("error:" + status);
+                }
+            });
+        });
+
+    </script>
+</head>
+<body>
+<div>
+    <table>
+        <tr>
+            <td>id</td>
+            <td>name</td>
+            <td>email</td>
+        </tr>
+        <tbody id="user-info">
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <script src="statics/jquery.js"></script>
+    <script>
+        $(function () {
+           $("#username").blur(function () {
+               $.post({
+                   url: "ajax/login",
+                   data : {
+                       "username": $("#username").val()
+                   },
+                   success : function(data) {
+                        console.log(data);
+                        $("#username-msg").html(data);
+                   },
+                   error : function(status) {
+                       $("#username-msg").html(status);
+                   }
+               });
+           });
+
+            $("#password").blur(function () {
+                $.post({
+                    url: "ajax/login",
+                    data : {
+                        "password": $("#password").val()
+                    },
+                    success : function(data) {
+                        console.log(data);
+                        $("#pwd-msg").html(data);
+                    },
+                    error : function(status) {
+                        $("#pwd-msg").html(status);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <label for="username">用户名：</label>
+        <input id="username" type="text">
+        <span id="username-msg"></span>
+        <br>
+        <label for="password">密码：</label>
+        <input id="password" type="text">
+        <span id="pwd-msg"></span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        // 一个js对象
+        var obj = {
+            name: "乐小猿",
+            age: "21",
+            sex: "男"
+        };
+
+        console.log(obj);
+        /*{name: "乐小猿", age: "21", sex: "男"}
+        name: "乐小猿"
+        age: "21"
+        sex: "男"*/
+
+        // 将一个js对象转为json格式的字符串
+        var json = JSON.stringify(obj);
+
+        console.log(json); //{"name":"乐小猿","age":"21","sex":"男"}
+
+        //将一个json字符串转为js对象
+        var obj2 = JSON.parse(json);
+
+        console.log(obj2);
+        /*{name: "乐小猿", age: "21", sex: "男"}
+        name: "乐小猿"
+        age: "21"
+        sex: "男"*/
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
