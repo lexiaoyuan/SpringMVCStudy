@@ -2,11 +2,11 @@
 
 # Spring MVC学习
 
-> Spring MVC属于Spring FrameWork的后续产品,是Spring FrameWork的一部分，是基于Java实现MVC的轻量级Web框架，Spring MVC 分离了控制器、模型对象、过滤器以及处理程序对象的角色，这种分离让它们更容易进行定制。
-
 - 官方文档：[https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html](https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html)
+- 参考视频：[【狂神说Java】SpringMVC最新教程IDEA版通俗易懂_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1aE41167Tu)
+- 项目完整代码参考：[lexiaoyuan/SpringMVCStudy: My SpringMVC study notes (github.com)](https://github.com/lexiaoyuan/SpringMVCStudy)、[SpringMVCStudy: 我的Spring MVC学习笔记 (gitee.com)](https://gitee.com/lexiaoyuan/springmvc-study)
 
-- 狂神说：[https://www.cnblogs.com/hellokuangshen/tag/SpringMVC/](https://www.cnblogs.com/hellokuangshen/tag/SpringMVC/)
+> Spring MVC属于Spring FrameWork的后续产品,是Spring FrameWork的一部分，是基于Java实现MVC的轻量级Web框架，Spring MVC 分离了控制器、模型对象、过滤器以及处理程序对象的角色，这种分离让它们更容易进行定制。
 
 ## 回顾Servlet
 
